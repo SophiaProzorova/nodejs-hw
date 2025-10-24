@@ -1,0 +1,15 @@
+import pino from "pino-http";
+
+export const logger = pino({
+    level: "info",
+    transport: {
+        target: "pino-pretty",
+        options: {
+            colorize: true,
+            translateTime: "HH:MM:ss",
+            ignor: "pid, hostname",
+            messageFormat: '{req.method} {req.url} {req.statusCode} - {responseTime}ms',
+            hideObject: true
+        }
+    }
+});

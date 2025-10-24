@@ -17,6 +17,8 @@
     "dotenv": "^17.2.3",
     "editorconfig": "^3.0.1",
     "express": "^5.1.0",
+    "http-errors": "^2.0.0",
+    "mongoose": "^8.19.1",
     "nodemon": "^3.1.10",
     "pino-http": "^11.0.0",
     "pino-pretty": "^13.1.2"
