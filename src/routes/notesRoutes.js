@@ -1,11 +1,11 @@
 import { Router } from "express";
-import { createNote, deleteNote, getNotebyId, getNotes, updateNote } from "../controllers/notesController.js";
+import { createNote, deleteNote, getNotebyId, getAllNotes, updateNote } from "../controllers/notesController.js";
 import { getAllNotesSchema, deleteNoteSchema, updateNoteSchema, noteIdSchema, createNoteSchema } from "../validations/notesValidation.js";
 import { celebrate } from "celebrate";
 
 const router = Router();
 
-router.get("/notes", celebrate(getAllNotesSchema), getNotes);
+router.get("/notes", celebrate(getAllNotesSchema), getAllNotes);
 
 router.get("/notes/:noteId", celebrate(noteIdSchema), getNotebyId);
 
